@@ -1,0 +1,42 @@
+.launch-list-item {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 12px 16px 12px 32px;
+    box-shadow: 0px 2px 5px #bfbfbf;
+    margin-bottom: 5px;
+
+    .launch-item-left {
+        display: flex;
+
+        .launch-number {
+        color: #545454;
+        font-size: 40px;
+        font-weight: 500;
+        width: 100px;
+        }
+
+        .mission-name {
+        color: #545454;
+        font-size: 32px;
+        font-weight: 500;
+        }
+    }
+
+    .launch-item-right {
+        display: flex;
+        flex-direction: column;
+
+        .launch-date {
+            color: #545454;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .rocket-name {
+            color: #545454;
+            font-size: 24px;
+            font-weight: 700;
+        }
+    }
+}
