@@ -39,11 +39,14 @@ export const LaunchPage = () => {
         <div className='launch-page'>
             <div className='launch-page-header'>
                 <img className='spacex-logo' src={spacexLogo} alt='rocket-launch'/>
-                <button>Reload data</button>
+                <button
+                onClick={() => loadLaunches()}>
+                    Reload data
+                    </button>
             </div>
             <div className='launch-page-content'>
                 <img className='launch-logo' src={launchLogo} alt='rocket-launch'/>
-            <LaunchList launches={launches}/>
+                <LaunchList launches={launches}/>
            </div>
         </div>
     )

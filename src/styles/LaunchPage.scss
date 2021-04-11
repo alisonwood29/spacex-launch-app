@@ -1,13 +1,27 @@
 .launch-page {
-    display: flex;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 32px 40px 0px 40px;
 
+    .launch-page-header {
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            background-color: #215184;
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: 700;
+            width: 134x;
+            height: 43px;
+            border-radius: 21.5px 0px 0px 21.5px;
+        }
+    }
+    .launch-page-content {
+        display: flex;
+    }
 
     .spacex-logo {
         width: 280px;
         height: 31px;
-        margin-top: 32px;
     }
 
     .launch-logo {
