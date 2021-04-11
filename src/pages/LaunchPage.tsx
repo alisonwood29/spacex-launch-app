@@ -1,19 +1,34 @@
 import React, {useState, useEffect} from 'react';
 
-import {LaunchList, LaunchProps} from '../components/LaunchList';
+import {LaunchList} from '../components/LaunchList';
 import {getAllLaunches} from '../api';
 
 import '../styles/LaunchPage.scss';
-import logo from '../assets/img/launch-home.png';
+import spacexLogo from '../assets/img/spacex-logo.png';
+import launchLogo from '../assets/img/launch-home.png';
+
+export interface LaunchItem {
+    missionName: string;
+    rocketName: string;
+    launchDate: Date;
+}
 
 export const LaunchPage = () => {
 
-    const [launches, setLaunches] = useState<Array<LaunchProps>>([]);
+    const [launches, setLaunches] = useState<Array<LaunchItem>>([]);
 
     const loadLaunches = async () => {
         const apiLaunches = await getAllLaunches();
-        console.log(apiLaunches);
-        setLaunches(apiLaunches);
+        let launchItems: LaunchItem[] = new Array<LaunchItem>();
+        apiLaunches.forEach((launch: any) => {
+            const newLaunchItem: LaunchItem = {
+                missionName: launch.mission_name,
+                rocketName: launch.rocket.rocket_name,
+                launchDate: new Date(launch.launch_date_local)
+              };
+              launchItems.push(newLaunchItem);
+        });
+        setLaunches(launchItems);
     };
 
     useEffect(() => {
@@ -22,8 +37,14 @@ export const LaunchPage = () => {
 
     return (
         <div className='launch-page'>
-            <img src={logo} alt='rocket-launch'/>
-           <LaunchList launches={launches}/>
+            <div className='launch-page-header'>
+                <img className='spacex-logo' src={spacexLogo} alt='rocket-launch'/>
+                <button>Reload data</button>
+            </div>
+            <div className='launch-page-content'>
+                <img className='launch-logo' src={launchLogo} alt='rocket-launch'/>
+            <LaunchList launches={launches}/>
+           </div>
         </div>
     )
 };

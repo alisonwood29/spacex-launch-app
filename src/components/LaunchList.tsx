@@ -1,40 +1,35 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import { format } from 'date-fns';
-import { enGB } from 'date-fns/locale';
 
-import { LaunchListItem, LaunchListItemProps } from './LaunchListItem';
+import { LaunchListItem } from './LaunchListItem';
+import { LaunchItem } from '../pages/LaunchPage';
 
-export interface LaunchProps {
-    mission_name: string;
-    rocket: {
-        rocket_name: string;
-    }
-    launch_date_local: Date;
-}
+import '../styles/LaunchList.scss';
+
 export interface LaunchListProps {
-    launches: Array<LaunchProps>;
+    launches: Array<LaunchItem>;
 };
 
 export const LaunchList: React.FC<LaunchListProps> = props => {
 
     const formatDate: (date: Date) => string = date => {
-        return format(date, 'E LLL dd yyyy, hh:mm:ss a', { locale: enGB });
+        return format(date, 'dd LLL yyyy');
       };
 
     return (
-        <div>
-           {props.launches.map((launch, index) => {
-        return (
-            <LaunchListItem 
-            name={launch.mission_name}
-            number={index+1}
-            rocketName={launch.rocket.rocket_name}
-            launchDate={formatDate(launch.launch_date_local)}
-            key={index}
-        />
-        );
-      })
-      }
+        <div className='launch-list'>
+           {props.launches.map((launch: LaunchItem, index: number) => {
+                return (
+                    <LaunchListItem 
+                        name={launch.missionName}
+                        number={index+1}
+                        rocketName={launch.rocketName}
+                        launchDate={formatDate(launch.launchDate)}
+                        key={index}
+                    />
+                    );
+                })
+            }
         </div>
     )
 };

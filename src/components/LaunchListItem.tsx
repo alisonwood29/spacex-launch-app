@@ -1,5 +1,7 @@
 import React from 'react';
 
+import '../styles/LaunchListItem.scss';
+
 export interface LaunchListItemProps {
     name: string;
     number: number;
@@ -10,11 +12,15 @@ export interface LaunchListItemProps {
 export const LaunchListItem: React.FC<LaunchListItemProps> = props => {
 
     return (
-        <div>
-            <p>#{props.number}</p>
-           This is a list item for {props.name}
-           <p>{props.launchDate}</p>
-           <p>{props.rocketName}</p>
+        <div className='launch-list-item'>
+            <div className='launch-item-left'>
+                <div className='launch-number'>#{props.number}</div> 
+                <div className='mission-name'>{props.name}</div>
+            </div>
+            <div className='launch-item-right'>
+                <div className='launch-date'>{props.launchDate} </div>
+                <div className='rocket-name'>{props.rocketName}</div>
+            </div>
         </div>
     )
 };
