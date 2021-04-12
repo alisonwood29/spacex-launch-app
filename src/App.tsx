@@ -1,11 +1,12 @@
-import './App.css';
+import React from 'react';
+
 import { LaunchPage } from './pages/LaunchPage';
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <LaunchPage/>
+        <LaunchPage />
       </header>
     </div>
   );
