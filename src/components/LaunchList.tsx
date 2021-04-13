@@ -4,8 +4,6 @@ import { format } from 'date-fns';
 import { LaunchListItem } from './LaunchListItem';
 import { LaunchItem } from '../pages/LaunchPage';
 
-import '../styles/LaunchList.scss';
-
 export interface LaunchListProps {
     launches: Array<LaunchItem>;
 };

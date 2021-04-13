@@ -21,6 +21,8 @@
             img {
                 margin-left: 10px;
                 margin-top: 2px;
+                width: 13.33px;
+                height: 13.33px;
             }
         }
     }
@@ -41,12 +43,15 @@
                 font-size: 16px;
                 font-weight: 700;
                 font-family: $font-family;
-                width: 156x;
+                width: 170px;
                 height: 43px;
                 float: right;
+                padding: 5px;
                 img {
-                    margin-left: 10px;
+                    margin-left: 5px;
                     margin-top: 2px;
+                    width: 14px;
+                    height: 18px;
                 }
             } 
         } 
