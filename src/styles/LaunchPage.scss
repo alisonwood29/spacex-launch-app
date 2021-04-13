@@ -1,3 +1,5 @@
+@import './stylesheet.scss';
+
 .launch-page {
     padding: 32px 40px 0px 40px;
 
@@ -5,18 +7,49 @@
         display: flex;
         justify-content: space-between;
 
-        button {
-            background-color: #215184;
+        .refresh-button {
+            background-color: $primary-blue;
             color: #FFFFFF;
             font-size: 16px;
             font-weight: 700;
-            width: 134x;
+            font-family: $font-family;
+            width: 139px;
             height: 43px;
             border-radius: 21.5px 0px 0px 21.5px;
+            position: absolute;
+            right: 0;
+            img {
+                margin-left: 10px;
+                margin-top: 2px;
+            }
         }
     }
     .launch-page-content {
         display: flex;
+
+        .launch-list-div {
+            display: flex;
+            flex-direction: column;
+            
+            .button-div {
+                margin: 25px 0px 15px 0px;
+            }
+
+           .sort-button {
+                background-color: $primary-blue;
+                color: #FFFFFF;
+                font-size: 16px;
+                font-weight: 700;
+                font-family: $font-family;
+                width: 156x;
+                height: 43px;
+                float: right;
+                img {
+                    margin-left: 10px;
+                    margin-top: 2px;
+                }
+            } 
+        } 
     }
 
     .spacex-logo {

@@ -12,7 +12,7 @@ export interface LaunchListItemProps {
 export const LaunchListItem: React.FC<LaunchListItemProps> = props => {
 
     return (
-        <div className='launch-list-item'>
+        <div className='launch-list-item' data-testid='launch-list-item'>
             <div className='launch-item-left'>
                 <div className='launch-number'>#{props.number}</div> 
                 <div className='mission-name' data-testid='mission-name'>{props.missionName}</div>

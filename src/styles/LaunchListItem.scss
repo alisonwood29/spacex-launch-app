@@ -1,3 +1,5 @@
+@import './stylesheet.scss';
+
 .launch-list-item {
     display: flex;
     justify-content: space-between;
@@ -10,16 +12,18 @@
         display: flex;
 
         .launch-number {
-        color: #545454;
+        color: $font-color;
         font-size: 40px;
         font-weight: 500;
         width: 100px;
+        font-family: $font-family;
         }
 
         .mission-name {
-        color: #545454;
+        color: $font-color;
         font-size: 32px;
         font-weight: 500;
+        font-family: $font-family;
         }
     }
 
@@ -28,15 +32,17 @@
         flex-direction: column;
 
         .launch-date {
-            color: #545454;
+            color: $font-color;
             font-size: 16px;
             font-weight: 400;
+            font-family: $font-family;
         }
 
         .rocket-name {
-            color: #545454;
+            color: $font-color;
             font-size: 24px;
             font-weight: 700;
+            font-family: $font-family;
         }
     }
 }
