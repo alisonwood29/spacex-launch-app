@@ -17,11 +17,11 @@ export const LaunchList: React.FC<LaunchListProps> = props => {
       };
 
     return (
-        <div className='launch-list'>
+        <div className='launch-list' data-testid='launch-list'>
            {props.launches.map((launch: LaunchItem, index: number) => {
                 return (
                     <LaunchListItem 
-                        name={launch.missionName}
+                        missionName={launch.missionName}
                         number={index+1}
                         rocketName={launch.rocketName}
                         launchDate={formatDate(launch.launchDate)}
