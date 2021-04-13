@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Launch page tests renders a snapshot 1`] = `
+<div>
+  <div
+    class="launch-page"
+  >
+    <div
+      class="launch-page-header"
+    >
+      <img
+        alt="SpaceX Title Logo"
+        class="spacex-logo"
+        src="spacex-logo.png"
+      />
+      <button
+        class="refresh-button"
+        data-testid="refresh-button"
+      >
+        Reload data
+        <img
+          alt="Refresh Icon"
+          class="refresh-icon"
+          src="refresh.png"
+        />
+      </button>
+    </div>
+    <div
+      class="launch-page-content"
+    >
+      <img
+        alt="rocket launch logo"
+        class="launch-logo"
+        src="launch-home.png"
+      />
+      <div
+        class="launch-list-div"
+      >
+        <div
+          class="button-div"
+        >
+          <button
+            class="sort-button"
+          >
+            <span>
+              Sort 
+              Descending
+            </span>
+            <img
+              alt="Up and Down Sort Arrows"
+              class="sort-icon"
+              src="sort.png"
+            />
+          </button>
+        </div>
+        <div
+          class="launch-list"
+          data-testid="launch-list"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Launch Item Component tests renders a snapshot 1`] = `
+<div>
+  <div
+    class="launch-list-item"
+    data-testid="launch-list-item"
+  >
+    <div
+      class="launch-item-left"
+    >
+      <div
+        class="launch-number"
+      >
+        #
+        1
+      </div>
+      <div
+        class="mission-name"
+        data-testid="mission-name"
+      >
+        Mission 1
+      </div>
+    </div>
+    <div
+      class="launch-item-right"
+    >
+      <div
+        class="launch-date"
+      >
+        25 March 2006
+         
+      </div>
+      <div
+        class="rocket-name"
+      >
+        Rocket 1
+      </div>
+    </div>
+  </div>
+</div>
+`;
