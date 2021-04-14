@@ -7,7 +7,7 @@ export interface LaunchListItemProps {
     number: number;
     rocketName: string;
     launchDate: string;
-  }
+  };
 
 export const LaunchListItem: React.FC<LaunchListItemProps> = props => {
 
@@ -22,5 +22,5 @@ export const LaunchListItem: React.FC<LaunchListItemProps> = props => {
                 <div className='rocket-name'>{props.rocketName}</div>
             </div>
         </div>
-    )
+    );
 };

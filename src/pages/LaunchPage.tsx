@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect}  from 'react';
 
-import {LaunchList} from '../components/LaunchList';
-import {getAllLaunches} from '../api';
+import { LaunchList } from '../components/LaunchList';
+import { getAllLaunches } from '../api';
 
 import '../styles/LaunchPage.scss';
 
@@ -14,19 +14,23 @@ export interface LaunchItem {
     missionName: string;
     rocketName: string;
     launchDate: Date;
-}
+};
 
-export const LaunchPage = () => {
+export const LaunchPage: React.FC = () => {
 
     const [launches, setLaunches] = useState<Array<LaunchItem>>([]);
     const [sortOrder, setSortOrder] = useState<string>('asc');
     /* WIP for filter by year
     const [yearsFilterList, setYearsFilterList] = useState<Array<>>([]); */
 
+    useEffect(() => {
+        loadLaunches();
+    }, []);
+
     const loadLaunches = async () => {
         const apiLaunches = await getAllLaunches();
 
-        let launchItems: LaunchItem[] = new Array<LaunchItem>();
+        const launchItems: LaunchItem[] = new Array<LaunchItem>();
 
         apiLaunches.forEach((launch: any) => {
             const newLaunchItem: LaunchItem = {
@@ -40,10 +44,6 @@ export const LaunchPage = () => {
         /* part of WIP for filter by year
         getYearsToFilterBy(launchItems); */
     };
-
-    useEffect(() => {
-        loadLaunches();
-    }, []);
 
     /* WIP: filter by year
     const getYearsToFilterBy = ((launchItems: Array<LaunchItem>) => {
@@ -62,7 +62,7 @@ export const LaunchPage = () => {
     const changeSortOrder = () => {
         sortOrder === 'asc' ? setSortOrder('desc') : setSortOrder('asc');
         sortLaunches();
-    }
+    };
 
     const sortLaunches = () => {
         return launches.sort(function(a, b) {
@@ -78,7 +78,7 @@ export const LaunchPage = () => {
 
             return sortOrder === 'asc' ? comparison * -1 : comparison;
         });
-    }
+    };
 
     /* TODO: onChange function for select component
     const onFilterChange = (e) => {
@@ -105,7 +105,6 @@ export const LaunchPage = () => {
                         src={refreshIcon} 
                         alt='Refresh Icon'
                     />
-
                 </button>
             </div>
 
@@ -126,9 +125,9 @@ export const LaunchPage = () => {
                             />
                         </button>
                     </div>
-                <LaunchList launches={launches}/>
+                    <LaunchList launches={launches}/>
                 </div>
            </div>
         </div>
-    )
+    );
 };

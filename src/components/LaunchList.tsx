@@ -29,5 +29,5 @@ export const LaunchList: React.FC<LaunchListProps> = props => {
                 })
             }
         </div>
-    )
+    );
 };
