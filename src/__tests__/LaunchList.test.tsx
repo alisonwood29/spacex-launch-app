@@ -36,4 +36,16 @@ describe('Launch list component tests', () => {
 
     expect(container).toMatchSnapshot();
   });
+
+  // it('should have two items in the list', () => {
+
+  // });
+
+  // it('should have a first item with name Mission 1', () => {
+
+  // });
+
+  // it('should format the date correctly', () => {
+
+  // });
 });

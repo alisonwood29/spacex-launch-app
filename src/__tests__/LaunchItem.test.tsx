@@ -1,7 +1,6 @@
 import { render, getByTestId } from '@testing-library/react';
 
 import { LaunchListItem } from '../components/LaunchListItem';
-import { LaunchItem } from '../pages/LaunchPage';
 
 const mockProps = {
     number: 1,
@@ -23,4 +22,8 @@ describe('Launch Item Component tests', () => {
 
     expect(container).toMatchSnapshot();
   });
+
+  // it('should render correct properties', () => {
+
+  // });
 });

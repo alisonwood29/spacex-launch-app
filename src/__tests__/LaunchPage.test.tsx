@@ -15,4 +15,20 @@ describe('Launch page tests', () => {
 
     expect(container).toMatchSnapshot();
   });
+
+  // it('should call loadLaunches when reload button clicked', () => {
+
+  // });
+
+  // it('should order items ascending on first load', () => {
+
+  // });
+
+  // it('should change the items order when sort order button clicked', () => {
+
+  // });
+
+  // it('should filter the items by year when filter value selected', () => {
+
+  // });
 });
